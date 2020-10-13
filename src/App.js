@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from "react";
 import './App.css';
+import tBot from './TBot.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  
+  componentDidMount() {
+    (function(d, m){
+      var kommunicateSettings =
+        {"appId":"2ac4dd28e96dbf54e36d0d4c1b223f659","popupWidget":true,"automaticChatOpenOnNavigation":true};
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+  }
+  
+  render() {
+    return(<div className={'bott'}>
+      <div className={'nameT'}>
+        Welcome, My name is 'T'.
+      </div>
+      <div className={'hi'}>
+        <div className={'personal'}>I am Tonya's personal bot.</div> Don't be rude... Say Hi...
+      </div>
+      <img className={'tBotBig'} src={tBot} width={'22%'} alt={'hello T'}/>
+      ️</div>)
+  }
+  
 }
-
 export default App;
