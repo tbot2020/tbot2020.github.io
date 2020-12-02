@@ -21,7 +21,7 @@ class App extends Component {
         Welcome, My name is 'T'.
       </div>
       <div className={'hi'}>
-        <div className={'personal'}>I am Tonya's personal bot.</div> Don't be rude... Say Hi...
+        <div className={'personal'}>I am Tonya's personal bot.</div> Don't be rude... Say Hi..
       </div>
       <img className={'tBotBig'} src={tBot} width={'22%'} alt={'hello T'}/>
       ️</div>)
